@@ -8,7 +8,7 @@ const test = require("../node-mailer");
 const upload = multer({
   storage: multerS3({
     s3: s3,
-    bucket: "runble",
+    bucket: "weeklyrun1",
     acl: "public-read",
     contentType: multerS3.AUTO_CONTENT_TYPE,
     key: function (req, file, cb) {
