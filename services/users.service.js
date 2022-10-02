@@ -279,6 +279,7 @@ class UserService {
     }
     distance = distance * 1000;
     const speed = (distance * 3600) / (time * 1000); // 속도(km/h)
+    console.log("스피드", speed);
     // 이용자가 자동차 혹은 다른 교통 수단을 이용할 경우에 기록을 저장하지 못하도록 세계신기록의 속도와 비교해서 false를 리턴
 
     if (distance <= 200 && speed >= 33) {
@@ -297,19 +298,24 @@ class UserService {
     let pace = 0;
     let test = 0;
     if (distance >= 1) {
+      console.log("테스트");
       pace = time / distance; //1km를 달리는데 걸린 시간
+      console.log("페이스", pace);
     } else if (distance < 1) {
       test = 1 / distance;
       pace = time * test;
     }
     const convertToMinutes = (millis) => {
+      console.log("마일스", millis);
       let minutes = Math.floor(millis / 60000);
+      console.log("minutes", minutes);
       let seconds = ((millis % 60000) / 1000).toFixed(0);
 
       return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
     };
 
-    let min = convertToMinutes(pace * 1000);
+    let min = convertToMinutes(pace * 1000000);
+    console.log("min", min);
     let min2 = min.split(":");
 
     return { min: Number(min2[0]), sec: Number(min2[1]) };

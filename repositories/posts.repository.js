@@ -98,7 +98,8 @@ class PostRepository {
   //포스트아이디를 받아 게시글을 상세 내용을 리턴하는 함수
   getPost = async (postId, userId) => {
     let isLike;
-
+    console.log("테스트");
+    await Post.update({ profile: null }, { where: { postId: 8 } });
     if (userId) {
       isLike = await Like.findOne({ where: { userId, postId } });
       if (isLike) {
@@ -111,7 +112,7 @@ class PostRepository {
     const getPost = await Post.findOne({
       where: { postId },
     });
-
+    console.log(getPost.image);
     return getPost;
   };
   //업데이트할 Column을 받아 수정하는 함수
