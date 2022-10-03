@@ -25,23 +25,20 @@
 
 # 기술스택
 <div align="center">
-  <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> 
-  <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> 
+  <img src="https://img.shields.io/badge/Nodejs-E34F26?style=for-the-badge&logo=Nodejs&logoColor=white"> 
+  <img src="https://img.shields.io/badge/express-1572B6?style=for-the-badge&logo=express3&logoColor=white"> 
   <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> 
-  <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"> 
+  <img src="https://img.shields.io/badge/sequelize-61DAFB?style=for-the-badge&logo=sequelize&logoColor=black"> 
   <br/>
-  <img src="https://img.shields.io/badge/react Query-FF4154?style=for-the-badge&logo=react-Query&logoColor=black"> 
-  <img src="https://img.shields.io/badge/recoil-61DAFB?style=for-the-badge&logo=recoil&logoColor=black"> 
-  <img src="https://img.shields.io/badge/styledcomponents-DB7093?style=for-the-badge&logo=styled-components&logoColor=white"> 
+  <img src="https://img.shields.io/badge/Mysql-FF4154?style=for-the-badge&logo=Mysql&logoColor=black"> 
+  <img src="https://img.shields.io/badge/jwt-61DAFB?style=for-the-badge&logo=jwt&logoColor=black"> 
+  <img src="https://img.shields.io/badge/pm2-DB7093?style=for-the-badge&logo=pm2&logoColor=white"> 
   <br/>
    <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> 
-   <img src="https://img.shields.io/badge/githubactions-181717?style=for-the-badge&logo=githubactions&logoColor=white"> 
+   <img src="https://img.shields.io/badge/Jenkins-181717?style=for-the-badge&logo=Jenkins&logoColor=white"> 
 </div>
 
-# 아키텍쳐
-<img width="1028" alt="스크린샷 2022-09-29 오후 9 50 36" src="https://user-images.githubusercontent.com/104764474/193035998-bd6c1c03-cffc-4539-ac81-96a4740da495.png">
-
-# 라이브러리![KakaoTalk_20221003_133910940](https://user-images.githubusercontent.com/108918319/193502861-a99a7417-ddc5-4d34-a8e1-81dd1e5df2f0.png)
+# 아키텍처![KakaoTalk_20221003_133910940](https://user-images.githubusercontent.com/108918319/193502861-a99a7417-ddc5-4d34-a8e1-81dd1e5df2f0.png)
 
 ### 1. React Query
 * 서버데이터를 이용하여 다양한 기능을 추가시킬 수 있으며, 서버 데이터와 클라이언트 데이터를 분리하여 사용하기 위함
