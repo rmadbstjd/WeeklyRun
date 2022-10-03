@@ -92,8 +92,8 @@
 # 팀원
 |팀원|깃허브 주소| 역할 분담|
 |----|-----|------|
-|금윤성| https://github.com/rmadbstjd   | 유저, 기록좌표, 게시글, 랭킹, 노드 메일링, 검색,태그 기능, 배포, S3 이미지 저장,  |
-|신성규|  https://github.com/sinsk23  | 댓글, 대댓글, 로깅(winston, morgon), CICD : Jenkins |
+|금윤성| https://github.com/rmadbstjd   | 유저, 기록좌표, 게시글, 랭킹, 노드 메일링, 검색, 태그 기능, 배포, S3 이미지 저장, 페이지무한스크롤 |
+|신성규|  https://github.com/sinsk23  | 댓글, 대댓글, 로깅(winston, morgon), CICD : Jenkins , 페이지무한스크롤|
 |김대석|  https://github.com/SkyWind4225   | 카카오로그인, 네이버로그인 |
 
 
