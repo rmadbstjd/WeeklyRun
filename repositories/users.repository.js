@@ -163,8 +163,10 @@ class UserRepositiory {
     return changeImage;
   };
   changeNickname = async (nickname, userId) => {
+    let consonant = [];
+    consonant = help.explode(nickname).join("");
     const changeNickname = await User.update(
-      { nickname },
+      { nickname, consonant },
       { where: { userId } }
     );
     return changeNickname;

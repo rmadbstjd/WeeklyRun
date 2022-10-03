@@ -286,8 +286,7 @@ class UserService {
     }
     distance = distance * 1000;
     const speed = (distance * 3600) / (time * 1000); // 속도(km/h)
-    console.log("거리", distance);
-    console.log("스피드", speed);
+
     // 이용자가 자동차 혹은 다른 교통 수단을 이용할 경우에 기록을 저장하지 못하도록 세계신기록의 속도와 비교해서 false를 리턴
 
     if (distance <= 200 && speed >= 33) {
