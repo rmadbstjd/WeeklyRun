@@ -33,7 +33,7 @@
   <img src="https://img.shields.io/badge/Mysql-FF4154?style=for-the-badge&logo=Mysql&logoColor=black"> 
   <img src="https://img.shields.io/badge/jwt-61DAFB?style=for-the-badge&logo=jwt&logoColor=black"> 
   <img src="https://img.shields.io/badge/pm2-DB7093?style=for-the-badge&logo=pm2&logoColor=white"> 
-  <br/>
+  
    <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> 
    <img src="https://img.shields.io/badge/Jenkins-181717?style=for-the-badge&logo=Jenkins&logoColor=white"> 
 </div>
@@ -52,6 +52,7 @@
 
     해결방안 : 이전에 계획한 Plan A 방법에서 Plan B 방법으로 우회 해결
 Plan A : Jenkins → S3 → EB( ELB, autoscailing) → 인스턴스배포
+    <br/>
 Plan B : Jenkins → projectserver 배포  (S3는 jenkins 와 연계되지 않고 따로)
     
   </div>
