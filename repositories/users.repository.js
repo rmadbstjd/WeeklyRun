@@ -162,6 +162,13 @@ class UserRepositiory {
     );
     return changeImage;
   };
+  changeNickname = async (nickname, userId) => {
+    const changeNickname = await User.update(
+      { nickname },
+      { where: { userId } }
+    );
+    return changeNickname;
+  };
   //닉네임을 받아 User 테이블에 중복된 닉네임이 있는지 찾는 함수
   checkNick = async (nickname) => {
     const checkNick = await User.findOne({ where: { nickname } });
@@ -243,6 +250,7 @@ class UserRepositiory {
     const getUserInfo = await Record.findOne({
       where: { userId },
     });
+
     const userInfo = await User.findOne({ where: { userId } });
 
     return {

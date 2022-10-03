@@ -39,6 +39,7 @@ router.put(
   upload.single("image"),
   userController.changeImage
 );
+router.put("/user/nickname", AuthMiddleware, userController.changeNickname);
 router.post("/user/location", AuthMiddleware, userController.sendLocation);
 router.post("/user/endrunning", AuthMiddleware, userController.endRunning);
 module.exports = router;

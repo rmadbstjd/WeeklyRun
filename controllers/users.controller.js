@@ -182,6 +182,19 @@ class UserController {
       next(error);
     }
   };
+  changeNickname = async (req, res, next) => {
+    try {
+      const { nickname } = req.body;
+      const { user } = res.locals;
+      const changeNickname = await this.userService.changeNickname(
+        nickname,
+        user.userId
+      );
+      res.status(200).json("닉네임 변경 완료!");
+    } catch (error) {
+      next(error);
+    }
+  };
   //클라이언트로부터 유저아이디를 받아 userService.deleteUser()으로 유저아이디를 넘기는 함수
   deleteUser = async (req, res, next) => {
     try {

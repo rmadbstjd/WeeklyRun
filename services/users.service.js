@@ -97,6 +97,13 @@ class UserService {
     const changeImage = await this.userRepository.changeImage(image, userId);
     return changeImage;
   };
+  changeNickname = async (nickname, userId) => {
+    const changeImage = await this.userRepository.changeNickname(
+      nickname,
+      userId
+    );
+    return changeImage;
+  };
   checkNick = async (nickname) => {
     if (!nickname) {
       log.error("UserController.checkNick : nickname is required");
