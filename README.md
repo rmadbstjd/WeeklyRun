@@ -94,4 +94,5 @@
 |김대석|  https://github.com/SkyWind4225   | 카카오로그인, 네이버로그인 |
 
 
-![image](https://user-images.githubusercontent.com/58474431/190442379-8843eb6a-9fbb-407d-99a2-9d21f5a34a3e.png)
+![image](https://user-images.githubusercontent.com/58474431/193502539-51cb4273-d864-4c35-82f5-0cf6aaeefaaf.png)
+
