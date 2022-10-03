@@ -44,15 +44,32 @@
 ![image](https://user-images.githubusercontent.com/58474431/193502539-51cb4273-d864-4c35-82f5-0cf6aaeefaaf.png)
 
 
-### 1. S3,Mysql
-* 
-* 
-### 2. Jenkins
-* 
-### 3. 
-*  
-# 트러블 슈팅 - Backend
 
+# 트러블 슈팅 - Backend
+<details>
+  <summary> 문제상황 </summary>
+  <div markdown="1">
+
+    해결방안 : 
+    
+  </div>
+</details>
+<details>
+  <summary> 문제상황 </summary>
+  <div markdown="1">
+   
+      해결방안 :
+    
+  </div>
+</details>
+<details>
+  <summary> 문제상황 </summary>
+  <div markdown="1">
+    
+    해결 방안 : 
+    
+  </div>
+</details>
 
 
 
@@ -96,4 +113,5 @@
 |신성규|  https://github.com/sinsk23  | 댓글, 대댓글, 로깅(winston, morgon), CICD : Jenkins , 페이지무한스크롤|
 |김대석|  https://github.com/SkyWind4225   | 카카오로그인, 네이버로그인 |
 
+프론트엔드 Github : https://github.com/HangHae99-Class8-FinalProject/WeeklyRun-FE
 
