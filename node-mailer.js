@@ -53,6 +53,14 @@ class mailer {
             <a href ="https://www.naver.com"> + <img src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpNvnS39N1DWWaYPfsAOF_6FPoohK1XLxTrg&usqp=CAU"/>`,
     });
   };
+  rankingSend = (content) => {
+    this.send({
+      from: env.MAIL_ID,
+      to: "dbsdud0033@gmail.com",
+      subject: "서비스에 관하여 에러가 발생했습니다.",
+      text: content,
+    });
+  };
   errorAlertSend = (content) => {
     this.send({
       from: env.MAIL_ID,

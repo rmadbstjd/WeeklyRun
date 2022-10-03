@@ -256,7 +256,6 @@ class UserRepositiory {
     };
   };
   getUserProfileInfo = async (userId) => {
-    await User.update({ image: null }, { where: { userId: 38 } });
     const getInfo = await User.findOne({ where: { userId } });
     return getInfo;
   };
@@ -290,6 +289,7 @@ class UserRepositiory {
       })
     );
   };
+
   //유저가 런닝을 할 때 실시간 위치를 불러오기 위해 5초마다 위도와 경도를 받아 계산후 이동한 거리를 리턴하는 함수
   sendLocation = async (userId, location) => {
     let arrLat = [];
