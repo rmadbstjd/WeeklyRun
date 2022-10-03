@@ -313,6 +313,7 @@ class UserRepositiory {
     const myInfo = await User.findOne({ where: { userId } });
 
     return {
+      userId: userId,
       myRanking: myRank,
       nickname: myInfo.nickname,
       image: myInfo.image,
@@ -360,36 +361,7 @@ class UserRepositiory {
       }
     }
 
-    //const addDist = await Location.update({ lat: sum }, { where: { userId } });
     return sum;
-    /*await redisClient.v4.lPush(`${userId}Lat`, `${lat}`);
-    await redisClient.v4.lPush(`${userId}Lng`, `${lng}`);
-    arrLat = await redisClient.v4.lRange(`${userId}Lat`, 0, 1);
-    arrLng = await redisClient.v4.lRange(`${userId}Lng`, 0, 1);
-    
-    if (arrLat.length < 2) {
-      return 0;
-    } else if (arrLat.length >= 2) {
-      let radLat1 = (Math.PI * arrLat[0]) / 180;
-      let radLat2 = (Math.PI * arrLat[1]) / 180;
-      let theta = arrLng[0] - arrLng[1];
-      let radTheta = (Math.PI * theta) / 180;
-      let dist =
-        Math.sin(radLat1) * Math.sin(radLat2) +
-        Math.cos(radLat1) * Math.cos(radLat2) * Math.cos(radTheta);
-      if (dist > 1) {
-        dist = 1;
-      }
-      dist = Math.acos(dist);
-      dist = (dist * 180) / Math.PI;
-      dist = dist * 60 * 1.1515 * 1.609344 * 1000;
-      if (dist < 100) dist = Math.round(dist / 10) * 10;
-      else dist = Math.round(dist / 100) * 100;
-      await redisClient.v4.lpush(`${userId}sum`, dist);
-      sum = await redisClient.v4(`${userId}sum`);
-
-      return sum;
-    }*/
   };
   //설문 조사 팝업 창을 유저가 로그인했을 때 보여주기 위한 함수
   getResearch = async (userId) => {
