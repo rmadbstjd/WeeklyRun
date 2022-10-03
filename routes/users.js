@@ -11,7 +11,8 @@ router.get("/user/search", AuthMiddleware, userController.searchUser);
 router.get("/user/info/:userId", userController.getUserProfileInfo);
 router.post("/user/signup", upload.single("image"), userController.signUp);
 router.post("/user/check", userController.checkNick);
-router.get("/user/rank", userController.getRank);
+router.get("/user/rank", AuthMiddleware, userController.getRank);
+router.get("/user/myrank", AuthMiddleware, userController.mygetRank);
 router.get("/user/startbtn", AuthMiddleware, userController.startBtn);
 router.post(
   "/user/report/post/:postId",

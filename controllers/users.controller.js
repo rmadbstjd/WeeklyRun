@@ -231,8 +231,18 @@ class UserController {
   //userService.getRank()를 호출하는 함수
   getRank = async (req, res, next) => {
     try {
-      const getRank = await this.userService.getRank();
+      const { user } = res.locals;
+      const getRank = await this.userService.getRank(user.userId);
       res.status(200).json(getRank);
+    } catch (error) {
+      next(error);
+    }
+  };
+  mygetRank = async (req, res, next) => {
+    try {
+      const { user } = res.locals;
+      const mygetRank = await this.userService.mygetRank(user.userId);
+      res.status(200).json(mygetRank);
     } catch (error) {
       next(error);
     }

@@ -271,16 +271,11 @@ class UserRepositiory {
   };
 
   //유저 랭킹을 조회하기 위해 달린 거리를 기준으로 상위 5명의 닉네임과 프로필 이미지를 리턴하는 함수
-  getRank = async () => {
+  getRank = async (userId) => {
     const getRank = await Record.findAll({
       limit: 5,
       order: [["distance", "DESC"]],
     });
-
-    const userArr = [];
-    for (let i = 0; i < getRank.length; i++) {
-      userArr.push(getRank[i].userId);
-    }
 
     return Promise.all(
       getRank.map(async (test) => {
@@ -298,6 +293,32 @@ class UserRepositiory {
         };
       })
     );
+  };
+
+  mygetRank = async (userId) => {
+    let rankArr = [];
+    let myRank = 0;
+    const getRank = await Record.findAll({
+      order: [["distance", "DESC"]],
+    });
+    for (let i = 0; i < getRank.length; i++) {
+      rankArr.push(getRank[i].userId);
+    }
+    for (let i = 0; i < rankArr.length; i++) {
+      if (userId === rankArr[i]) {
+        myRank = i + 1;
+      }
+    }
+    const mygetRank = await Record.findOne({ where: { userId } });
+    const myInfo = await User.findOne({ where: { userId } });
+
+    return {
+      myRanking: myRank,
+      nickname: myInfo.nickname,
+      image: myInfo.image,
+      distance: mygetRank.distance,
+      time: mygetRank.time,
+    };
   };
 
   //유저가 런닝을 할 때 실시간 위치를 불러오기 위해 5초마다 위도와 경도를 받아 계산후 이동한 거리를 리턴하는 함수

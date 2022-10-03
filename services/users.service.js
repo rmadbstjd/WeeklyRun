@@ -178,9 +178,13 @@ class UserService {
     const getUserInfo = await this.userRepository.getUserProfileInfo(userId);
     return getUserInfo;
   };
-  getRank = async () => {
-    const getRank = await this.userRepository.getRank();
+  getRank = async (userId) => {
+    const getRank = await this.userRepository.getRank(userId);
     return getRank;
+  };
+  mygetRank = async (userId) => {
+    const mygetRank = await this.userRepository.mygetRank(userId);
+    return mygetRank;
   };
   sendLocation = async (userId, location) => {
     if (!userId) {
