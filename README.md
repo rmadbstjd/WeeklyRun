@@ -9,51 +9,80 @@
 ### 1. 로그인
 * 네이버 와 카카오를 활용한 소셜로그인으로 간편하게 로그인 가능합니다.
 ### 2. 목표 설정하기
-* 한 주간의 목표를 설정하고, 하루하루의 기록을 볼 수 있습니다.
+* 한 주간의 목표를 설정하고, 하루하루의 기록을 볼 수 있으며 , 일주일 마다 월요일 기준으로 랭킹이 업데이트 된다. 
 ### 3. 런닝 기록하기
 * 실시간 위치를 기반으로 런닝을 추적하며 기록 및 피드를 통해 공유할 수 있습니다.
 ### 4. 피드
 * 최신순 및 좋아요 순으로 정렬하여 볼 수 있습니다.
-* 좋아요 및 답글,대답글을 이용할 수 있습니다.
+* 좋아요 및 댓글, 대댓글을 이용할 수 있습니다.
 ### 5. 검색하기
-* 해시태그 및 유저 이름을 자동완성 기능을 이용하여 검색할 수 있습니다.
-### 6. 답글페이지
-* 답글을 입력 할 수 있으며, 슬라이드를 이용하여 수정 및 삭제 가 가능합니다.
+* 해시태그 및 유저 이름을 자동완성 기능을 이용하여 검색하고 해당 유저의 피드 페이지를 확인 할 수 있습니다.
+### 6. 댓글페이지
+* 댓글을 입력 할 수 있으며, 슬라이드를 이용하여 수정 및 삭제 가 가능합니다.
 ### 7. 신고하기 기능
 * 부적절한 게시글 을 신고 하거나, 이용중에 발생한 문제에 관해 신고할 수 있는 별도의 페이지가 존재합니다.
 
 
 # 기술스택
 <div align="center">
-  <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> 
-  <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> 
+  <img src="https://img.shields.io/badge/Nodejs-E34F26?style=for-the-badge&logo=Nodejs&logoColor=white"> 
+  <img src="https://img.shields.io/badge/express-1572B6?style=for-the-badge&logo=express3&logoColor=white"> 
   <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> 
-  <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"> 
+  <img src="https://img.shields.io/badge/sequelize-61DAFB?style=for-the-badge&logo=sequelize&logoColor=black"> 
   <br/>
-  <img src="https://img.shields.io/badge/react Query-FF4154?style=for-the-badge&logo=react-Query&logoColor=black"> 
-  <img src="https://img.shields.io/badge/recoil-61DAFB?style=for-the-badge&logo=recoil&logoColor=black"> 
-  <img src="https://img.shields.io/badge/styledcomponents-DB7093?style=for-the-badge&logo=styled-components&logoColor=white"> 
-  <br/>
+  <img src="https://img.shields.io/badge/Mysql-FF4154?style=for-the-badge&logo=Mysql&logoColor=black"> 
+  <img src="https://img.shields.io/badge/jwt-61DAFB?style=for-the-badge&logo=jwt&logoColor=black"> 
+  <img src="https://img.shields.io/badge/pm2-DB7093?style=for-the-badge&logo=pm2&logoColor=white"> 
+  
    <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> 
-   <img src="https://img.shields.io/badge/githubactions-181717?style=for-the-badge&logo=githubactions&logoColor=white"> 
+   <img src="https://img.shields.io/badge/Jenkins-181717?style=for-the-badge&logo=Jenkins&logoColor=white"> 
 </div>
 
-# 아키텍쳐
-<img width="1028" alt="스크린샷 2022-09-29 오후 9 50 36" src="https://user-images.githubusercontent.com/104764474/193035998-bd6c1c03-cffc-4539-ac81-96a4740da495.png">
+# 아키텍처![KakaoTalk_20221003_133910940](https://user-images.githubusercontent.com/108918319/193502861-a99a7417-ddc5-4d34-a8e1-81dd1e5df2f0.png)
 
-# 라이브러리
-### 1. React Query
-* 서버데이터를 이용하여 다양한 기능을 추가시킬 수 있으며, 서버 데이터와 클라이언트 데이터를 분리하여 사용하기 위함
-* Optimistic UI , Invalidate 등을 활용하여 보다 나은 UX를 제공하기 위함
-### 2. Recoil
-* 리덕스에 불필요하게 비대한 보일러 플레이터를 줄이고, 딱 필요한 만큼의 데이터만 공유하여 사용하기 위함
-### 3. @lodable/component
-*  Code Spitting 이란 ? <br/>
-앱의 규모가 커짐에 따라 Bundling 되어 제공되는 파일의 사이즈도 커지게 됨으로써 앱의 로딩 속도가 느려지게 된다.<br/>
-이러한 문제를 해결하기 위해 Code Splitting을 적용하여 <br/>
-현재 필요한 모듈만 로딩(lazy-load) 되도록 하여 성능을 향상시킬 수 있다.
+# ERD
+![image](https://user-images.githubusercontent.com/58474431/193502539-51cb4273-d864-4c35-82f5-0cf6aaeefaaf.png)
 
-# 트러블 슈팅
+
+
+# 트러블 슈팅 - Backend
+<details>
+  <summary> Elastic Beanstalk 사용시 .env 파일을 서버 내부에 작성 할 수 있는 방법이 없음. </summary>
+  <div markdown="1">
+
+    해결방안 : 이전에 계획한 Plan A 방법에서 Plan B 방법으로 우회 해결
+Plan A : Jenkins → S3 → EB( ELB, autoscailing) → 인스턴스배포
+    <br/>
+Plan B : Jenkins → projectserver 배포  (S3는 jenkins 와 연계되지 않고 따로)
+    
+  </div>
+</details>
+<details>
+  <summary> 서버 한개로 Jenkins cicd 작업중 permission  error로 인해 서버 작동 불가 </summary>
+  <div markdown="1">
+   
+      해결방안 : 서버 인스턴스 갯수를 defalut 2개로 프로젝트 서버와 jenkins 전용서버 나누어 설계 함으로 문제 해결
+    
+  </div>
+</details>
+
+</div>
+</details>
+<details>
+  <summary> 유저 탈퇴시 댓글, 대댓글 수가 제대로 카운트 되지 않는 문제 발생 </summary>
+  <div markdown="1">
+    게시글 페이지와, 댓글 페이지에서 댓글이나 대댓글을 작성한 유저가 탈퇴시,
+    댓글, 대댓글 갯수를 카운팅하는 옵션 값에서 탈퇴한 유저가 작성했던 카운트 데이터가 삭제되지 않음
+   
+      해결방안 : 코드 유저 탈퇴 디렉토리에서 유저 탈퇴시 탈퇴한 유저의 카운팅 값을 없애주는 로직 구현으로 문제 해결
+    
+  </div>
+</details>
+
+
+
+
+# 트러블 슈팅 - Frontend
 <details>
   <summary>위치를 불러오는 함수와 시간 타이머 함수를 시작 버튼 ,정지 버튼 및 종료 버튼을 이용하여 제어할 수 있어야하며, 일정한 시간 간격으로 함수가 작동해야함</summary>
   <div markdown="1">
@@ -87,11 +116,11 @@
 
 
 # 팀원
-|팀원|깃허브 주소| 역할 분담|
-|----|-----|------|
-|금윤성| https://github.com/rmadbstjd   | 유저, 기록좌표, 게시글, 랭킹, 노드 메일링, 검색,태그 기능, 배포, S3 이미지 저장,  |
-|신성규|  https://github.com/sinsk23  | 댓글, 대댓글, 로깅(winston, morgon), CICD : Jenkins |
-|김대석|  https://github.com/SkyWind4225   | 카카오로그인, 네이버로그인 |
+|팀원 |깃허브 주소| 역할 분담|
+|-----|-----|------|
+|금윤성 | https://github.com/rmadbstjd   | 유저, 기록좌표, 게시글, 랭킹, 노드 메일링, 검색, 태그 기능, 배포, S3 이미지 저장, 페이지무한스크롤 |
+|신성규 |  https://github.com/sinsk23  | 댓글, 대댓글, 로깅(winston, morgon), CICD : Jenkins , 페이지무한스크롤|
+|김대석 |  https://github.com/SkyWind4225   | 카카오로그인, 네이버로그인 |
 
+프론트엔드 Github : https://github.com/HangHae99-Class8-FinalProject/WeeklyRun-FE
 
-![image](https://user-images.githubusercontent.com/58474431/190442379-8843eb6a-9fbb-407d-99a2-9d21f5a34a3e.png)
