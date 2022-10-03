@@ -162,6 +162,15 @@ class UserRepositiory {
     );
     return changeImage;
   };
+  changeNickname = async (nickname, userId) => {
+    let consonant = [];
+    consonant = help.explode(nickname).join("");
+    const changeNickname = await User.update(
+      { nickname, consonant },
+      { where: { userId } }
+    );
+    return changeNickname;
+  };
   //닉네임을 받아 User 테이블에 중복된 닉네임이 있는지 찾는 함수
   checkNick = async (nickname) => {
     const checkNick = await User.findOne({ where: { nickname } });
@@ -243,6 +252,7 @@ class UserRepositiory {
     const getUserInfo = await Record.findOne({
       where: { userId },
     });
+
     const userInfo = await User.findOne({ where: { userId } });
 
     return {
@@ -259,6 +269,7 @@ class UserRepositiory {
     const getInfo = await User.findOne({ where: { userId } });
     return getInfo;
   };
+
   //유저 랭킹을 조회하기 위해 달린 거리를 기준으로 상위 5명의 닉네임과 프로필 이미지를 리턴하는 함수
   getRank = async () => {
     const getRank = await Record.findAll({
@@ -288,6 +299,7 @@ class UserRepositiory {
       })
     );
   };
+
   //유저가 런닝을 할 때 실시간 위치를 불러오기 위해 5초마다 위도와 경도를 받아 계산후 이동한 거리를 리턴하는 함수
   sendLocation = async (userId, location) => {
     let arrLat = [];

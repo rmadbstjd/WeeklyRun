@@ -1,6 +1,8 @@
 const schedule = require("node-schedule");
-const { Record } = require("./models");
-
+const UserRepositiory = require("./repositories/users.repository");
+const { Record, User } = require("./models");
+const mailer = require("./node-mailer");
+const emailService = new mailer();
 let day = new Date();
 day = day.getDay();
 const set1 = (s) => {

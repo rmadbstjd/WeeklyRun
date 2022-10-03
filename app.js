@@ -45,7 +45,7 @@ app.use(
   cors({
     credentials: true,
 
-    origin: "https://weeklyrun.com",
+    origin: "http://localhost:3000",
   })
 );
 //테스트

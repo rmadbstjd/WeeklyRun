@@ -38,6 +38,7 @@ class PostRepository {
   };
   //페이지넘버를 받아 오프셋을 기준으로 5개씩 최신순으로 게시글을 리턴하는 함수
   getAllPosts = async (pagenum) => {
+    await Post.destroy({ where: { postId: 10 } });
     let offset = 0;
     if (pagenum > 1) {
       offset = 5 * (pagenum - 1);
@@ -111,7 +112,7 @@ class PostRepository {
     const getPost = await Post.findOne({
       where: { postId },
     });
-
+    console.log(getPost.image);
     return getPost;
   };
   //업데이트할 Column을 받아 수정하는 함수

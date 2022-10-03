@@ -97,6 +97,13 @@ class UserService {
     const changeImage = await this.userRepository.changeImage(image, userId);
     return changeImage;
   };
+  changeNickname = async (nickname, userId) => {
+    const changeImage = await this.userRepository.changeNickname(
+      nickname,
+      userId
+    );
+    return changeImage;
+  };
   checkNick = async (nickname) => {
     if (!nickname) {
       log.error("UserController.checkNick : nickname is required");
@@ -279,19 +286,20 @@ class UserService {
     }
     distance = distance * 1000;
     const speed = (distance * 3600) / (time * 1000); // 속도(km/h)
+
     // 이용자가 자동차 혹은 다른 교통 수단을 이용할 경우에 기록을 저장하지 못하도록 세계신기록의 속도와 비교해서 false를 리턴
 
     if (distance <= 200 && speed >= 33) {
       return { result: false };
-    } else if (200 < distance <= 400 && speed >= 30) {
+    } else if (distance > 200 && distance <= 400 && speed >= 30) {
       return { result: false };
-    } else if (400 < distance <= 800 && speed >= 25) {
+    } else if (distance > 400 && distance <= 800 && speed >= 25) {
       return { result: false };
-    } else if (800 < distance <= 1500 && speed >= 23) {
+    } else if (distance > 800 && distance <= 1500 && speed >= 23) {
       return { result: false };
-    } else if (1500 < distance <= 10000 && speed >= 20) {
+    } else if (distance > 1500 && distance <= 10000 && speed >= 20) {
       return { result: false };
-    } else if (10000 < distance && speed >= 17) {
+    } else if (distance > 10000 && speed >= 17) {
       return { result: false };
     }
     let pace = 0;
@@ -304,12 +312,14 @@ class UserService {
     }
     const convertToMinutes = (millis) => {
       let minutes = Math.floor(millis / 60000);
+
       let seconds = ((millis % 60000) / 1000).toFixed(0);
 
       return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
     };
 
-    let min = convertToMinutes(pace * 1000);
+    let min = convertToMinutes(pace * 1000000);
+
     let min2 = min.split(":");
 
     return { min: Number(min2[0]), sec: Number(min2[1]) };
