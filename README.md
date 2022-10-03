@@ -40,18 +40,23 @@
 
 # 아키텍처![KakaoTalk_20221003_133910940](https://user-images.githubusercontent.com/108918319/193502861-a99a7417-ddc5-4d34-a8e1-81dd1e5df2f0.png)
 
-### 1. React Query
-* 서버데이터를 이용하여 다양한 기능을 추가시킬 수 있으며, 서버 데이터와 클라이언트 데이터를 분리하여 사용하기 위함
-* Optimistic UI , Invalidate 등을 활용하여 보다 나은 UX를 제공하기 위함
-### 2. Recoil
-* 리덕스에 불필요하게 비대한 보일러 플레이터를 줄이고, 딱 필요한 만큼의 데이터만 공유하여 사용하기 위함
-### 3. @lodable/component
-*  Code Spitting 이란 ? <br/>
-앱의 규모가 커짐에 따라 Bundling 되어 제공되는 파일의 사이즈도 커지게 됨으로써 앱의 로딩 속도가 느려지게 된다.<br/>
-이러한 문제를 해결하기 위해 Code Splitting을 적용하여 <br/>
-현재 필요한 모듈만 로딩(lazy-load) 되도록 하여 성능을 향상시킬 수 있다.
+# ERD
+![image](https://user-images.githubusercontent.com/58474431/193502539-51cb4273-d864-4c35-82f5-0cf6aaeefaaf.png)
 
-# 트러블 슈팅
+
+### 1. S3,Mysql
+* 
+* 
+### 2. Jenkins
+* 
+### 3. 
+*  
+# 트러블 슈팅 - Backend
+
+
+
+
+# 트러블 슈팅 - Frontend
 <details>
   <summary>위치를 불러오는 함수와 시간 타이머 함수를 시작 버튼 ,정지 버튼 및 종료 버튼을 이용하여 제어할 수 있어야하며, 일정한 시간 간격으로 함수가 작동해야함</summary>
   <div markdown="1">
@@ -91,6 +96,4 @@
 |신성규|  https://github.com/sinsk23  | 댓글, 대댓글, 로깅(winston, morgon), CICD : Jenkins |
 |김대석|  https://github.com/SkyWind4225   | 카카오로그인, 네이버로그인 |
 
-
-![image](https://user-images.githubusercontent.com/58474431/193502539-51cb4273-d864-4c35-82f5-0cf6aaeefaaf.png)
 
