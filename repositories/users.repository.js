@@ -183,6 +183,20 @@ class UserRepositiory {
         },
       }
     );
+    const finduserId = await Comment.findAll({ where: { userId } });
+    let userIdArr = [];
+    for (let i = 0; i < finduserId.length; i++) {
+      userIdArr.push(finduserId[i].userId);
+    }
+    await Comment.update(
+      { nickname: nickname },
+      {
+        where: {
+          userId: { [Op.in]: userIdArr },
+        },
+      }
+    );
+
     return changeNickname;
   };
   //닉네임을 받아 User 테이블에 중복된 닉네임이 있는지 찾는 함수
