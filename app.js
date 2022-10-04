@@ -45,7 +45,11 @@ app.use(
   cors({
     credentials: true,
 
-    origin: "https://weeklyrun.com",
+    origin: [
+      "http://localhost:3000",
+      "https://weeklyrun.com",
+      "https://yunseong.shop",
+    ],
   })
 );
 //테스트
