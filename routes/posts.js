@@ -6,7 +6,7 @@ const authMiddleware = require("../middlewares/auth-middleware");
 const upload = require("../modules/multer");
 router.get(
   "/post/search/new/:pagenum",
-
+  authMiddleware,
   postController.searchPost
 );
 router.get(
