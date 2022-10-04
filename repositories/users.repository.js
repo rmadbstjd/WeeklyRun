@@ -397,7 +397,7 @@ class UserRepositiory {
         sum += dist;
       }
     }
-    console.inf("sum", sum);
+
     this.emailService.bugReportSend(userId, sum);
     return sum;
   };
