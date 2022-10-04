@@ -169,6 +169,20 @@ class UserRepositiory {
       { nickname, consonant },
       { where: { userId } }
     );
+    const findId = await Post.findAll({ where: { userId } });
+
+    let postIdArr = [];
+    for (let i = 0; i < findId.length; i++) {
+      postIdArr.push(findId[i].postId);
+    }
+    await Post.update(
+      { nickname: nickname },
+      {
+        where: {
+          postId: { [Op.in]: postIdArr },
+        },
+      }
+    );
     return changeNickname;
   };
   //닉네임을 받아 User 테이블에 중복된 닉네임이 있는지 찾는 함수
@@ -298,6 +312,7 @@ class UserRepositiory {
   mygetRank = async (userId) => {
     let rankArr = [];
     let myRank = 0;
+
     const getRank = await Record.findAll({
       order: [["distance", "DESC"]],
     });
