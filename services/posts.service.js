@@ -148,10 +148,7 @@ class PostService {
         "PostController.searchPost : hashtag is required"
       );
     }
-    const searchPost = await this.postRepository.searchLikePost(
-      hashtag,
-      pagenum
-    );
+    const searchPost = await this.postRepository.searchPost(hashtag, pagenum);
     return Promise.all(
       searchPost.map(async (post) => {
         const getPosts = await this.postRepository.getPost(post.postId, userId);

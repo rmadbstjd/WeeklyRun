@@ -143,6 +143,7 @@ class PostController {
       const { hashtag } = req.query;
       const { pagenum } = req.params;
       const { user } = res.locals;
+
       let type = false;
 
       const searchPost = await this.postService.searchPost(
