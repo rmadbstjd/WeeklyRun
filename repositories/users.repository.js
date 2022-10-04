@@ -196,6 +196,14 @@ class UserRepositiory {
         },
       }
     );
+    await ReComment.update(
+      { nickname: nickname },
+      {
+        where: {
+          userId: { [Op.in]: userIdArr },
+        },
+      }
+    );
 
     return changeNickname;
   };

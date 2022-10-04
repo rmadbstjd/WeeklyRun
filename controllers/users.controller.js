@@ -185,6 +185,7 @@ class UserController {
   changeNickname = async (req, res, next) => {
     try {
       const { nickname } = req.body;
+
       const { user } = res.locals;
       const changeNickname = await this.userService.changeNickname(
         nickname,
