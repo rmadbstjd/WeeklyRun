@@ -41,6 +41,7 @@ class PostController {
   getAllPosts = async (req, res, next) => {
     try {
       const { user } = res.locals;
+
       const { pagenum } = req.params;
 
       let type = false;
