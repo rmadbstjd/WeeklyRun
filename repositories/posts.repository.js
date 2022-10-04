@@ -180,8 +180,8 @@ class PostRepository {
       offset: offset,
       limit: 5,
       order: [
-        ["createdAt", "DESC"],
         ["like", "DESC"],
+        ["createdAt", "DESC"],
       ],
       where: {
         postId: { [Op.in]: arrayId },
