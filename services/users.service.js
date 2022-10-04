@@ -329,10 +329,8 @@ class UserService {
     let min = convertToMinutes(pace * 1000000);
 
     let min2 = min.split(":");
-    this.emailService.bugReportSend(
-      userId,
-      `time : ${time} distance : ${distance} speed : ${speed} pace : ${pace}`
-    );
+    let content = `time : ${time} distance : ${distance} speed : ${speed} pace : ${pace}`;
+    this.emailService.bugReportSend(userId, content);
 
     return { min: Number(min2[0]), sec: Number(min2[1]) };
   };
