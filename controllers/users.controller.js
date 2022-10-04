@@ -7,7 +7,6 @@ const log = require("../winston");
 const BadRequestError = require("./http-errors").BadRequestError;
 const emailService = new mailer();
 class UserController {
-  e;
   userService = new UserService();
 
   //클라이언트로부터 유저아이디, 거리, 시간을 받아 userService.addDistance()으로 유저아이디, 거리, 시간을 넘기는 함수
@@ -324,6 +323,7 @@ class UserController {
   endRunning = async (req, res, next) => {
     try {
       const { user } = res.locals;
+
       const { time, distance } = req.body;
       const endRun = await this.userService.endRun(user.userId, time, distance);
       res.status(200).json(endRun);

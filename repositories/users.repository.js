@@ -13,7 +13,6 @@ const Op = Sequelize.Op;
 const mailer = require("../node-mailer");
 const help = require("korean-regexp");
 const day = require("../node-scheduler");
-const emailService = new mailer();
 
 // redis 연결
 const redis = require("redis");
@@ -28,6 +27,7 @@ redisClient.on("error", (err) =>
 redisClient.connect();
 
 class UserRepositiory {
+  emailService = new mailer();
   //유저가 런닝한 거리와 시간을 받아 Record 테이블에 저장하는 함수
   addDistance = async (userId, distance, time) => {
     const getUserRecord = await Record.findOne({ where: { userId } });
@@ -397,7 +397,7 @@ class UserRepositiory {
         sum += dist;
       }
     }
-
+    this.emailService.bugReportSend(userId, sum);
     return sum;
   };
   //설문 조사 팝업 창을 유저가 로그인했을 때 보여주기 위한 함수
@@ -421,11 +421,11 @@ class UserRepositiory {
     return "동의하기를 눌렀습니다.";
   };
   sendBugReport = async (nickname, content) => {
-    emailService.bugReportSend(nickname, content);
+    this.emailService.bugReportSend(nickname, content);
     return "감사합니다. 관리자에게 메일을 성공적으로 보냈습니다.";
   };
   sendPostReport = async (nickname, postId, check) => {
-    emailService.postReportSend(nickname, postId, check);
+    this.emailService.postReportSend(nickname, postId, check);
     return "감사합니다. 성공적으로 게시글을 신고하였습니다.";
   };
   startBtn = async (userId) => {

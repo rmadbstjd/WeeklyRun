@@ -2,8 +2,12 @@ const UserRepositiory = require("../repositories/users.repository");
 const log = require("../winston");
 const help = require("korean-regexp");
 const { User, Record } = require("../models");
+
 let BadRequestError = require("./http-errors").BadRequestError;
+const mailer = require("../node-mailer");
+
 class UserService {
+  emailService = new mailer();
   userRepository = new UserRepositiory();
 
   addDistance = async (userId, distance, time) => {
@@ -325,6 +329,10 @@ class UserService {
     let min = convertToMinutes(pace * 1000000);
 
     let min2 = min.split(":");
+    this.emailService.bugReportSend(
+      userId,
+      `time : ${time} distance : ${distance} speed : ${speed} pace : ${pace}`
+    );
 
     return { min: Number(min2[0]), sec: Number(min2[1]) };
   };
