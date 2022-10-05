@@ -1,13 +1,13 @@
 const express = require("express");
 require("dotenv").config;
 const cors = require("cors");
+const helmet = require("helmet");
 const passport = require("passport");
 const { sequelize } = require("./models");
 const rotuer = require("./routes");
 const port = 3000;
 const passportConfig = require("./passport");
-const swaggerUi = require("swagger-ui-express");
-// const swaggerFile = require("./swagger-output");
+
 const logger = require("./winston");
 const morgan = require("morgan");
 //미리 정의된 이름의 문자열
@@ -41,6 +41,9 @@ sequelize
   .catch((err) => {
     console.error(err);
   });
+
+app.use(helmet());
+
 app.use(
   cors({
     credentials: true,
