@@ -1,10 +1,10 @@
 
-![스크린샷 2022-09-29 오후 6 33 01](https://user-images.githubusercontent.com/104764474/193014502-654a27b5-5511-4c94-b878-5356659c1ab3.png)
+![sport centre (1)](https://user-images.githubusercontent.com/108918319/193982219-1d35c2b1-5de5-413a-9dcc-1fcc3d9f7675.png)
 <br/>
 # WeeklyRun
 런닝을 하고 싶은데 동기부여가 있으면 좋겠나요?<br/>
-![sport centre (1)](https://user-images.githubusercontent.com/108918319/193982219-1d35c2b1-5de5-413a-9dcc-1fcc3d9f7675.png)
-![sport centre](https://user-images.githubusercontent.com/108918319/193982222-5a97e65e-857f-4244-8360-c323bfc95ec0.png)
+
+
 
 한 주간의 목표를 세우고 매일매일 기록을 확인하며 <br/>
 유저들과 피드를 공유해보세요!
