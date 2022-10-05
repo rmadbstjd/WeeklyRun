@@ -37,6 +37,7 @@
    <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> 
    <img src="https://img.shields.io/badge/Jenkins-181717?style=for-the-badge&logo=Jenkins&logoColor=white"> 
 </div>
+![image01](https://user-images.githubusercontent.com/108918319/193979243-16c84864-71ea-4985-9b44-55aa58248b45.png)
 
 # 아키텍처![KakaoTalk_20221003_133910940](https://user-images.githubusercontent.com/108918319/193502861-a99a7417-ddc5-4d34-a8e1-81dd1e5df2f0.png)
 
