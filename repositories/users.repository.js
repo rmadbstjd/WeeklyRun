@@ -16,6 +16,7 @@ const day = require("../node-scheduler");
 
 // redis 연결
 const redis = require("redis");
+const { log } = require("winston");
 const redisClient = redis.createClient({
   url: `redis://${process.env.REDIS_USERNAME}:${process.env.REDIS_PASSWORD}@${process.env.REDIS_HOST}:${process.env.REDIS_PORT}/0`,
   legacyMode: true,
@@ -280,11 +281,12 @@ class UserRepositiory {
         { where: { commentId: comments[i] } }
       );
     }
-    const deleteUser = await User.destroy({ where: { userId } });
+    await User.destroy({ where: { userId } });
     return "테스트중";
   };
   //유저아이디를 받아 해당 유저의 런닝 기록을 리턴하는 함수
   getUserInfo = async (userId) => {
+    console.log("테스트", 2262.7 / (1000).toFixed(1));
     const getUserInfo = await Record.findOne({
       where: { userId },
     });
@@ -398,7 +400,7 @@ class UserRepositiory {
       }
     }
 
-    this.emailService.bugReportSend(userId, sum);
+    this.emailService.bugReportSend(userId, String(sum));
     return sum;
   };
   //설문 조사 팝업 창을 유저가 로그인했을 때 보여주기 위한 함수
