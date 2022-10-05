@@ -1,3 +1,4 @@
+
 ![스크린샷 2022-09-29 오후 6 33 01](https://user-images.githubusercontent.com/104764474/193014502-654a27b5-5511-4c94-b878-5356659c1ab3.png)
 <br/>
 # WeeklyRun
@@ -40,7 +41,7 @@
 
 
 # 아키텍처 
-![image01](https://user-images.githubusercontent.com/108918319/193979243-16c84864-71ea-4985-9b44-55aa58248b45.png)
+![image02](https://user-images.githubusercontent.com/108918319/193979846-1da1a6da-c710-4cd4-ad75-5238cc8c3066.png)
 
 # ERD
 ![image](https://user-images.githubusercontent.com/58474431/193502539-51cb4273-d864-4c35-82f5-0cf6aaeefaaf.png)
