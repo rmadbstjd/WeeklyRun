@@ -109,7 +109,7 @@ class SocialController {
               email,
               provider,
               nickname: emailCheck.nickname,
-
+              userId: emailCheck.userId,
               member: true,
               message: "success",
             });
@@ -119,6 +119,7 @@ class SocialController {
               email,
               provider,
               nickname,
+              accessToken,
               member: false,
             });
           }
