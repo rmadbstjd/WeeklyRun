@@ -46,7 +46,7 @@ sequelize
 app.use(helmet.frameguard());
 app.use(helmet.hidePoweredBy());
 app.use(helmet.hsts());
-app.user(helmet.xssFilter());
+app.use(helmet.xssFilter());
 
 app.use(
   cors({
