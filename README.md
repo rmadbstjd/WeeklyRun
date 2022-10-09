@@ -2,7 +2,7 @@
 ![sport centre (1)](https://user-images.githubusercontent.com/108918319/193982219-1d35c2b1-5de5-413a-9dcc-1fcc3d9f7675.png)
 <br/>
 # WeeklyRun
-<a href="https://weeklyrun.com">Home Page</a> / <a href="https://www.youtube.com/watch?v=wmHWVBSeeHE">Youtube</a>
+<h2><a href="https://weeklyrun.com">Home Page</a></h2> / <h2><a href="https://www.youtube.com/watch?v=wmHWVBSeeHE">Youtube</a></h2>
 <br/>
 런닝을 하고 싶은데 동기부여가 있으면 좋겠나요?<br/>
 한 주간의 목표를 세우고 매일매일 기록을 확인하며<br/>
@@ -51,8 +51,8 @@
 ![image](https://user-images.githubusercontent.com/58474431/193502539-51cb4273-d864-4c35-82f5-0cf6aaeefaaf.png)
 
 
-# API 명세서
-<h1><a href="https://www.notion.so/17544d313260490eb624d492043543bd?v=7f8015cd1630416891e480ad19a586a9"># API 명세서<a></h1>
+
+<h1><a href="https://www.notion.so/17544d313260490eb624d492043543bd?v=7f8015cd1630416891e480ad19a586a9">API 명세서<a></h1>
 
 # 트러블 슈팅 - Backend
 <details>
