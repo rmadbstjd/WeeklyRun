@@ -50,10 +50,10 @@
 </div>
 
 
-# 아키텍처 
+# 📚 아키텍처 
 ![image02](https://user-images.githubusercontent.com/108918319/193979846-1da1a6da-c710-4cd4-ad75-5238cc8c3066.png)
 
-# ERD
+# 🗃 ERD
 ![image](https://user-images.githubusercontent.com/58474431/193502539-51cb4273-d864-4c35-82f5-0cf6aaeefaaf.png)
 
 
