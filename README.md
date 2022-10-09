@@ -50,10 +50,68 @@
 </div>
 
 <h2>📖 라이브러리 </h2>
-| First Header | Second Header |
-| ------------ | ------------- |
-| Content Cell | Content Cell  |
-| Content Cell | Content Cell  |
+<table border = 1>
+  <tr>
+    <th>라이브러리</th>
+    <th>설명</th>
+  </tr>
+  <tr>
+    <th>dotenv</th>
+    <th>환경 변수 관리</th>
+  </tr>
+  <tr>
+    <th>cors</th>
+    <th>교차 리소스 공유</th>
+  </tr>
+  <tr>
+    <th>express</th>
+    <th>서버</th>
+  </tr>
+  <tr>
+    <th>cors</th>
+    <th>교차 리소스 공유</th>
+  </tr>
+  <tr>
+    <th>jsonwebtoken</th>
+    <th>서명 암호화</th>
+  </tr>
+  <tr>
+    <th>winston</th>
+    <th>로그 관리</th>
+  </tr>
+  <tr>
+    <th>node-mailer</th>
+    <th>웰컴 메일 및 에러 발생시에 관리자 계정으로 메일 발송</th>
+  </tr>
+  <tr>
+    <th>node-scheduler</th>
+    <th>일정 주기마다 로직 실행</th>
+  </tr>
+  <tr>
+    <th>mysql2</th>
+    <th>async/await 사용 위해 설치</th>
+  </tr>
+  <tr>
+    <th>sequelize</th>
+    <th>My SQL ORM</th>
+  </tr>
+  <tr>
+    <th>prettier</th>
+    <th>코드 스타일 통일</th>
+  </tr>
+  <tr>
+    <th>helemt</th>
+    <th>보안 강화</th>
+  </tr>
+  <tr>
+    <th>multer-S3</th>
+    <th>S3에 이미지 저장</th>
+  </tr>
+  <tr>
+    <th>passport</th>
+    <th>소셜 로그인 미들웨어</th>
+  </tr>
+</table>
 
 
 # 📚 아키텍처 
@@ -64,7 +122,7 @@
 
 
 
-<h1>📋 <a href="https://www.notion.so/17544d313260490eb624d492043543bd?v=7f8015cd1630416891e480ad19a586a9">API 명세서<a></h1>
+<h1>📋 <a href="https://www.notion.so/17544d313260490eb624d492043543bd?v=7f8015cd1630416891e480ad19a586a9](https://www.notion.so/Weekly-Run-API-c5ba2f0594b248c99e0063f6bf33ceda">API 명세서<a></h1>
 
 # 트러블 슈팅 - Backend
 <details>
