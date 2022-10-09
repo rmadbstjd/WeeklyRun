@@ -3,6 +3,7 @@
 <br/>
 # WeeklyRun
 <a href="https://weeklyrun.com">Home Page</a>
+<a href="https://www.youtube.com/watch?v=wmHWVBSeeHE">Youtube</a>
 런닝을 하고 싶은데 동기부여가 있으면 좋겠나요?<br/>
 
 
