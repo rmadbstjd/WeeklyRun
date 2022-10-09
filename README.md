@@ -50,7 +50,9 @@
 # ERD
 ![image](https://user-images.githubusercontent.com/58474431/193502539-51cb4273-d864-4c35-82f5-0cf6aaeefaaf.png)
 
+# API 명세서
 
+<a href="https://www.notion.so/17544d313260490eb624d492043543bd?v=7f8015cd1630416891e480ad19a586a9">API 명세서<a>
 
 # 트러블 슈팅 - Backend
 <details>
