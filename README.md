@@ -2,7 +2,7 @@
 ![sport centre (1)](https://user-images.githubusercontent.com/108918319/193982219-1d35c2b1-5de5-413a-9dcc-1fcc3d9f7675.png)
 <br/>
 # WeeklyRun
-<a href="weeklyrun.com"></a>
+<a href="weeklyrun.com">Home Page</a>
 런닝을 하고 싶은데 동기부여가 있으면 좋겠나요?<br/>
 
 
