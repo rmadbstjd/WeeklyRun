@@ -33,7 +33,8 @@
 <h2>🗓 프로젝트 기간 </h2>
 2022년 08월 26일 ~ 2022년 10월 7일
 <br/>
-# 기술스택
+<br/>
+<h2> 기술스택 </h2>
 <div align="center">
   <img src="https://img.shields.io/badge/Nodejs-E34F26?style=for-the-badge&logo=Nodejs&logoColor=white"> 
   <img src="https://img.shields.io/badge/express-1572B6?style=for-the-badge&logo=express3&logoColor=white"> 
