@@ -29,7 +29,8 @@
 * 부적절한 게시글 을 신고 하거나, 이용중에 발생한 문제에 관해 신고할 수 있는 별도의 페이지가 존재합니다.
 
 <h2>🗓 프로젝트 기간 </h2>
-2022년 08월 26일 ~ 2022년 10월 7
+2022년 08월 26일 ~ 2022년 10월 7일
+<br/>
 # 기술스택
 <div align="center">
   <img src="https://img.shields.io/badge/Nodejs-E34F26?style=for-the-badge&logo=Nodejs&logoColor=white"> 
