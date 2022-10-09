@@ -122,7 +122,7 @@
 
 
 
-<h1>📋 <a href="https://www.notion.so/17544d313260490eb624d492043543bd?v=7f8015cd1630416891e480ad19a586a9](https://www.notion.so/Weekly-Run-API-c5ba2f0594b248c99e0063f6bf33ceda">API 명세서<a></h1>
+<h1>📋 <a href="https://www.notion.so/Weekly-Run-API-c5ba2f0594b248c99e0063f6bf33ceda">API 명세서<a></h1>
 
 # 트러블 슈팅 - Backend
 <details>
