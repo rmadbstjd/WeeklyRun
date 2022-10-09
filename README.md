@@ -125,28 +125,8 @@
 <h1>📋 <a href="https://www.notion.so/Weekly-Run-API-c5ba2f0594b248c99e0063f6bf33ceda">API 명세서<a></h1>
 
 # 트러블 슈팅 - Backend
-<details>
-  <summary> Elastic Beanstalk 사용시 .env 파일을 서버 내부에 작성 할 수 있는 방법이 없음. </summary>
-  <div markdown="1">
 
-    해결방안 : 이전에 계획한 Plan A 방법에서 Plan B 방법으로 우회 해결
-Plan A : Jenkins → S3 → EB( ELB, autoscailing) → 인스턴스배포
-    <br/>
-Plan B : Jenkins → projectserver 배포  (S3는 jenkins 와 연계되지 않고 따로)
-    
-  </div>
-</details>
-<details>
-  <summary> 서버 한개로 Jenkins cicd 작업중 permission  error로 인해 서버 작동 불가 </summary>
-  <div markdown="1">
-   
-      해결방안 : 서버 인스턴스 갯수를 defalut 2개로 프로젝트 서버와 jenkins 전용서버 나누어 설계 함으로 문제 해결
-    
-  </div>
-</details>
 
-</div>
-</details>
 <details>
   <summary> 유저 탈퇴시 댓글, 대댓글 수가 제대로 카운트 되지 않는 문제 발생 </summary>
   <div markdown="1">
@@ -156,6 +136,8 @@ Plan B : Jenkins → projectserver 배포  (S3는 jenkins 와 연계되지 않�
       해결방안 : 코드 유저 탈퇴 디렉토리에서 유저 탈퇴시 탈퇴한 유저의 카운팅 값을 없애주는 로직 구현으로 문제 해결
     
   </div>
+  ![image](https://user-images.githubusercontent.com/58474431/194772891-b10122c9-112c-42d6-b9f7-e4f2404f0e91.png)
+
 </details>
 
 
