@@ -121,10 +121,6 @@
 ![image](https://user-images.githubusercontent.com/58474431/194806578-02ca04da-82f7-4145-bfb3-0c21b5341c04.png)
 
 
-
-
-<h1>📋 <a href="https://www.notion.so/Weekly-Run-API-c5ba2f0594b248c99e0063f6bf33ceda">API 명세서<a></h1>
-
 # 트러블 슈팅
 
 ### 문제 상황
