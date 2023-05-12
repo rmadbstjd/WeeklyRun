@@ -60,10 +60,6 @@
     <th>환경 변수 관리</th>
   </tr>
   <tr>
-    <th>cors</th>
-    <th>교차 리소스 공유</th>
-  </tr>
-  <tr>
     <th>express</th>
     <th>서버</th>
   </tr>
