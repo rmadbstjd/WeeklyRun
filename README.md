@@ -129,8 +129,9 @@
  4. where문을 통해 배열안에 저장된 postId가 같은 게시글들을 가져온 후, 가져온 게시글들의 postId가 배열의 postId와 같으면 count를 1씩 증가함.
  
  5. 게시글의 Column인 commentNum에서 count만큼 빼준 후 update문을 통해 게시글을 업데이트함.
- ![image](https://user-images.githubusercontent.com/58474431/194772983-178a44ae-e39e-45df-bd3a-895c177158d5.png)
- 
+
+![image](https://github.com/rmadbstjd/WeeklyRun/assets/58474431/8d34bc1b-07af-44a3-9dfb-b66a35af831b)
+
 ### 효과
  유저가 탈퇴할 경우, 기존에 일치하지 않던 게시글의 댓글 수가 일치하여 정확한 댓글 수를 사용자에게 제공되도록 함.    
  
