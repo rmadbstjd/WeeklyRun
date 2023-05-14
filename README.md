@@ -176,7 +176,7 @@
  ### 효과
  기존에는 검색창에 해쉬태그 '새벽런닝'을 전부 입력하였다면 개선 후에는 'ㅅ' 혹은 '새'만 쳐도 '새벽런닝'이 완성된 것을 볼 수 있음.  
  ### Before
- ![image](https://user-images.githubusercontent.com/58474431/194777149-8c16c193-e9a1-4de0-8fa8-1eec88f40d27.png)
+![33](https://user-images.githubusercontent.com/58474431/194777746-669fa784-9854-4f88-9f45-5702c31f4d30.jpg)
 
  
  ### After
