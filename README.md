@@ -151,6 +151,7 @@
     200m, 400m, 800m, 1.5km, 10km 등으로 거리를 나누었고, 거리 별 속도는 올림픽 육상 기준으
     로 제한하였다.
 ### 코드
+![image](https://github.com/rmadbstjd/WeeklyRun/assets/58474431/be957edc-ba1c-4f5c-a157-24dbdaeae3eb)
 
 ![image](https://github.com/rmadbstjd/WeeklyRun/assets/58474431/b2abe86c-3f59-4ac3-a188-daae46a0274d)
 
