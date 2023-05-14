@@ -129,7 +129,8 @@
 4. 배열의 반복문을 통해 유저가 작성한 댓글의 수를 카운트하고, 해당 게시글의 총 댓글 수에서 카운트 만큼 뺀 후, 게시글을 다시 업데이트한다.
 
 ### 코드
-![image](https://github.com/rmadbstjd/WeeklyRun/assets/58474431/8d34bc1b-07af-44a3-9dfb-b66a35af831b)
+![image](https://github.com/rmadbstjd/WeeklyRun/assets/58474431/094cc190-a0fb-4d4c-b0ea-d33a1070d731)
+
 
 ### 효과
  유저가 탈퇴할 경우, 기존에 일치하지 않던 게시글의 댓글 수가 일치하여 정확한 댓글 수를 사용자에게 제공되도록 함.    
