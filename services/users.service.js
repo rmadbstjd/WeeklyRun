@@ -279,64 +279,34 @@ class UserService {
     const startBtn = await this.userRepository.startBtn(userId);
     return startBtn;
   };
-  endRun = async (userId, time, distance) => {
-    if (!userId) {
-      log.error("UserService.endRun : userId is required");
-      throw new BadRequestError("UserService.endRun: userId is required");
-    }
-    if (!time) {
-      log.error("UserService.endRun : time is required");
-      throw new BadRequestError("UserService.endRun: time is required");
-    }
-    if (!distance) {
-      log.error("UserService.endRun : distance is required");
-      throw new BadRequestError("UserService.endRun: distance is required");
-    }
-    distance = distance * 1000;
-    const speed = (distance * 3600) / (time * 1000); // 속도(km/h)
+endRun = async (userId, time, distance) => {
+  if (!userId || !time || !distance) {
+    const errMsg = `UserService.endRun : userId, time, and distance are required`;
+    log.error(errMsg);
+    throw new BadRequestError(`UserService.endRun: ${errMsg}`);
+  }
 
-    // 이용자가 자동차 혹은 다른 교통 수단을 이용할 경우에 기록을 저장하지 못하도록 거리별 제한 속도를 두어
-    // 제한 속도를 넘어가면 false를 리턴록 코드 작성
+  distance *= 1000;
+  const speed = (distance * 3600) / (time * 1000); // km/h
 
-    if (distance <= 200 && speed >= 33) {
-      return { result: false };
-    } else if (distance > 200 && distance <= 400 && speed >= 30) {
-      return { result: false };
-    } else if (distance > 400 && distance <= 800 && speed >= 25) {
-      return { result: false };
-    } else if (distance > 800 && distance <= 1500 && speed >= 23) {
-      return { result: false };
-    } else if (distance > 1500 && distance <= 10000 && speed >= 20) {
-      return { result: false };
-    } else if (distance > 10000 && speed >= 17) {
-      return { result: false };
-    }
-    let pace = 0;
-    let test = 0;
-    if (distance >= 1) {
-      pace = time / distance; //1km를 달리는데 걸린 시간
-    } else if (distance < 1) {
-      test = 1 / distance;
-      pace = time * test;
-    }
-    const convertToMinutes = (millis) => {
-      let minutes = Math.floor(millis / 60000);
+  const distanceLimits = [200, 400, 800, 1500, 10000];
+  const speedLimits = [33, 30, 25, 23, 20, MAX_SPEED];
+  const limit = distanceLimits.findIndex(d => distance <= d);
+  const maxSpeed = speedLimits[limit];
 
-      let seconds = ((millis % 60000) / 1000).toFixed(0);
+  if (speed > maxSpeed) {
+    return { result: false };
+  }
 
-      return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
-    };
-
-    let min = convertToMinutes(pace * 1000000);
-
-    let min2 = min.split(":");
-
-    this.emailService.bugReportSend(userId, time);
-    this.emailService.bugReportSend(userId, distance);
-    this.emailService.bugReportSend(userId, speed);
-    this.emailService.bugReportSend(userId, pace);
-    return { min: Number(min2[0]), sec: Number(min2[1]) };
-  };
-}
+  const pace = (time / distance) * 1000; // min/km
+  const [min, sec] = pace.toFixed(0).split("");
+  
+  this.emailService.bugReportSend(userId, time);
+  this.emailService.bugReportSend(userId, distance);
+  this.emailService.bugReportSend(userId, speed);
+  this.emailService.bugReportSend(userId, pace);
+  
+  return { min: Number(min), sec: Number(sec) };
+};
 
 module.exports = UserService;
