@@ -279,32 +279,25 @@ class UserService {
     const startBtn = await this.userRepository.startBtn(userId);
     return startBtn;
   };
+  
 endRun = async (userId, time, distance) => {
   if (!userId || !time || !distance) {
     const errMsg = `UserService.endRun : userId, time, and distance are required`;
     log.error(errMsg);
     throw new BadRequestError(`UserService.endRun: ${errMsg}`);
   }
-
   distance *= 1000;
   const speed = (distance * 3600) / (time * 1000); // km/h
-
   const distanceLimits = [200, 400, 800, 1500, 10000];
   const speedLimits = [33, 30, 25, 23, 20, MAX_SPEED];
   const limit = distanceLimits.findIndex(d => distance <= d);
   const maxSpeed = speedLimits[limit];
 
-  if (speed > maxSpeed) {
-    return { result: false };
-  }
+  if (speed > maxSpeed) return { result: false };
+  
 
   const pace = (time / distance) * 1000; // min/km
   const [min, sec] = pace.toFixed(0).split("");
-  
-  this.emailService.bugReportSend(userId, time);
-  this.emailService.bugReportSend(userId, distance);
-  this.emailService.bugReportSend(userId, speed);
-  this.emailService.bugReportSend(userId, pace);
   
   return { min: Number(min), sec: Number(sec) };
 };
