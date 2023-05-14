@@ -153,7 +153,7 @@
 ### 코드
 ![image](https://github.com/rmadbstjd/WeeklyRun/assets/58474431/be957edc-ba1c-4f5c-a157-24dbdaeae3eb)
 
-![image](https://github.com/rmadbstjd/WeeklyRun/assets/58474431/b2abe86c-3f59-4ac3-a188-daae46a0274d)
+
 
 ### 효과
   주간 랭킹 시스템을 통한 공정한 경쟁이 이루어지도록함
